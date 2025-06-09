@@ -1,10 +1,9 @@
 import './style.css'
-import { createClient } from '@supabase/supabase-js'
 import { format } from 'date-fns'
 
 const supabaseUrl = 'https://ahfdcxiyyntnmcylfkqn.supabase.co';
 const supabaseanonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFoZmRjeGl5eW50bm1jeWxma3FuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NTk2MTEsImV4cCI6MjA2MzIzNTYxMX0.bmUO6vPu8svMLE-SbuI9_Zg8XCGHrwRr9D4n-tgoaW8";
-const supabase = createClient(supabaseUrl, supabaseanonKey);
+const supabase = supabase.createClient(supabaseUrl, supabaseanonKey);
 
 const app = document.createElement('div');
 app.className = 'max-w-2xl mx-auto p-4';
